@@ -1,3 +1,11 @@
-function botonFunction() {
-    document.getElementById("myBoton").innerHTML = "This is a parahraph";
-}
+//Esperamos a que el DOM este completamete cargado
+document.addEventListener('DOMContentLoaded', () => {
+//Obtememos es formulario y el contenedor de entradas
+    const formulario = document.getElementById('blog-form');
+    const entradasDiv = document.getElementById('entradas');
+
+    //Manejador del evento 'submit' del formulario
+    formulario.addEventListener('submit', function(e) {
+        e.preventDefault(); //Evita que la pagina se recargue al enviar el formulario
+    })
+})
