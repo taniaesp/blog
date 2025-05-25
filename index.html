@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Blog de Tania</title>
+    <!--Enlace a la hoja de estilos CSS-->
     <link rel="stylesheet" href="Project/style.css">
 </head>
 <body>
-    <div class="container">
+    <!--Encabezado principal del blog-->
+    <header>
         <h1>Mi blog personal</h1>
+    </header>
+        
 
-        <!--Formulario para crear una nueva entrada-->
-        <form id="blog-form">
+    <!--Formulario para crear una nueva entrada-->
+    <section class="formulario">
+         <form id="blog-form">
             <input type="text" id="titulo" placeholder="Titulo de la entrada" required>
             <textarea id="contenido" placeholder="Escribe tu contenido aquí" required></textarea>
             <button type="submit">Publicar</button>
         </form>
+    </section>
+        
 
-        <!--Sección donde apareceran las entradas-->
-        <div id="entradas">
-            <!--Aquí se añadirán las publicaciones dinámicamente-->
-        </div>
-    </div>
+    <!--Sección donde apareceran las entradas-->
+    <section id="entradas">
+        <!--Aquí se añadirán las publicaciones dinámicamente-->
+    </section>
+    
 </body>
+<!--Enlace al archivo JavaScript-->
 <script src="/Project/script.js"></script>
 </html>
