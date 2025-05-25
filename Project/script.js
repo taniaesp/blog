@@ -45,5 +45,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    entradasDiv.addEventListener('click', function(e) {
+        const target = e.target;
+        const entradaDiv = target.closest('.entrada');
+        const id = entradaDiv.getAttribute('data-id');
+
+        if (target.classList.contains('delete-btn')) {
+            //Borrar entrada
+            entradas.splice(id, 1);
+            guardarEntradas();
+            renderEntradas();
+
+        }
+
+        if (target.classList.contains('edit-btn')) {
+            //Editar entrada
+            const entrada = entradas[id];
+            const nuevoTitulo = prompt('Editar titulo: ', entrada.titulo);
+            const nuevoContenido = prompt('Editar contenido: ', entradaContedido);
+
+            if (nuevoTitulo !== null && nuevoContenido !== null) {
+                entradas[id] = {
+                    titulo: nuevoTitulo,
+                    contenido: nuevoContenido
+                };
+                guardarEntradas();
+                renderEntradas();
+            }
+        }
+    });
+
+    renderEntradas();
     
-})
+});
