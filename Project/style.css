@@ -14,22 +14,31 @@ header {
     text-align: center; 
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+/*Estilo del formulario*/
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-input, textarea {
+/*Campos de texto y área para contenido*/
+
+.formulario input, 
+.formulario textarea {
+    width: 96%;
     padding: 10px;
-    font-size: 1em;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-button {
-    padding: 10px;
+/*Boton de publicación*/
+
+.formulario button {
+    padding: 10px 20px;
     background-color: #007BFF;
     color: white;
     font-size: 1em;
