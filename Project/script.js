@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
             entradaDiv.innerHTML = `
             <h2>${entrada.titulo}</h2>
             <p>${entrada.contenido}</p>
-            <div class = "entrada-buttons">
-                <button class = "edit-btn"> Edit </button>
-                <button class = "delete-btn"> Delete </button> 
+            <div class="entrada-buttons">
+                <button class="edit-btn"> Edit </button>
+                <button class="delete-btn"> Delete </button> 
             </div>
             `;
 
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //Editar entrada
             const entrada = entradas[id];
             const nuevoTitulo = prompt('Editar titulo: ', entrada.titulo);
-            const nuevoContenido = prompt('Editar contenido: ', entradaContedido);
+            const nuevoContenido = prompt('Editar contenido: ', entrada.contenido);
 
             if (nuevoTitulo !== null && nuevoContenido !== null) {
                 entradas[id] = {
