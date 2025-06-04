@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const entradasDiv = document.getElementById('entradas');
 
     let entradas = JSON.parse(localStorage.getItem('entradas')) || [];
-
+aaAA
     function guardarEntradas () {
         localStorage.setItem('entradas', JSON.stringify(entradas));
     }
