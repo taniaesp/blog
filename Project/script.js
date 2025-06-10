@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const entradasDiv = document.getElementById('entradas');
 
     let entradas = JSON.parse(localStorage.getItem('entradas')) || [];
-aaAA
     function guardarEntradas () {
         localStorage.setItem('entradas', JSON.stringify(entradas));
     }
@@ -34,8 +33,13 @@ aaAA
     formulario.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const titulo = document.getElementById('titulo').value;
-        const contenido = document.getElementById('contenido').value;
+        const titulo = document.getElementById('titulo').value.trim();
+        const contenido = document.getElementById('contenido').value.trim();
+
+        if (!titulo || !contenido) {
+            alert("Ambos campos son obligatorios.");
+            return;
+        }
 
         const nuevaEntrada ={ titulo, contenido};
         entradas.push(nuevaEntrada);
